@@ -172,15 +172,17 @@ try {
             </Link>
           </div>
 
-           <div className="space-y-3">
-  <GoogleLogin
-    onSuccess={(res) => {
-      handleGoogleLogin(res.credential)
-    }}
-    onError={() => {
-      alert("Login failed")
-    }}
-  />
+ <div className="space-y-3">
+  <div className="flex justify-center">
+    <GoogleLogin
+      onSuccess={(res) => {
+        handleGoogleLogin(res.credential)
+      }}
+      onError={() => {
+        alert("Google login failed")
+      }}
+    />
+  </div>
 
   <div className="flex items-center gap-3">
     <div className="flex-1 h-px bg-gray-300"></div>
@@ -188,7 +190,6 @@ try {
     <div className="flex-1 h-px bg-gray-300"></div>
   </div>
 </div>
-
           <div>
             <button type="submit"
              disabled={isLoading}
