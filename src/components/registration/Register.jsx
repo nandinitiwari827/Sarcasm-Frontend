@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-import logo from "../../assets/sarcasmLogo.jpg"
+import logo from "../../assets/sarcasmLogo.png"
 import { registerUser, googleAuthUser } from "../../api"
 import { GoogleLogin } from "@react-oauth/google"
 
@@ -448,15 +448,17 @@ localStorage.setItem("refreshToken", res.data.refreshToken)
             </div>
           </div>
 
-          <div className="space-y-3">
-  <GoogleLogin
-    onSuccess={(res) => {
-      handleGoogleLogin(res.credential);
-    }}
-    onError={() => {
-      alert("Google login failed");
-    }}
-  />
+ <div className="space-y-3">
+  <div className="flex justify-center">
+    <GoogleLogin
+      onSuccess={(res) => {
+        handleGoogleLogin(res.credential)
+      }}
+      onError={() => {
+        alert("Google login failed")
+      }}
+    />
+  </div>
 
   <div className="flex items-center gap-3">
     <div className="flex-1 h-px bg-gray-300"></div>
@@ -464,6 +466,7 @@ localStorage.setItem("refreshToken", res.data.refreshToken)
     <div className="flex-1 h-px bg-gray-300"></div>
   </div>
 </div>
+
 
           <div>
             <button

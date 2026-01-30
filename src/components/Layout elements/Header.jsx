@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import React from 'react'
-import logo from "../../assets/sarcasmLogo.jpg"
+import logo from "../../assets/sarcasmLogo.png"
 import { Link, NavLink } from 'react-router-dom'
 import { useNavigate } from "react-router-dom"
 import { logoutUser } from "../../api.js"
