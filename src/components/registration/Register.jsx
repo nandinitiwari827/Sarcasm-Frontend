@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-import logo from "../../../../SarcasmModelfrontend/sarcasmLogo.jpg"
+import logo from "../../assets/sarcasmLogo.jpg"
 import { registerUser, googleAuthUser } from "../../api"
 import { GoogleLogin } from "@react-oauth/google"
 

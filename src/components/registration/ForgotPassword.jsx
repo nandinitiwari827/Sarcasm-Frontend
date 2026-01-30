@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import logo from "../../../../SarcasmModelfrontend/sarcasmLogo.jpg"
+import logo from "../../assets/sarcasmLogo.jpg"
 import { forgotPassword, logoutUser } from "../../api.js"
 
 const ForgotPassword = () => {

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import React from 'react'
-import logo from "../../../../SarcasmModelfrontend/sarcasmLogo.jpg"
+import logo from "../../assets/sarcasmLogo.jpg"
 import { Link, NavLink } from 'react-router-dom'
 import { useNavigate } from "react-router-dom"
 import { logoutUser } from "../../api.js"
@@ -47,7 +47,7 @@ function Header() {
     <div className='sticky z-10 top-0'>
         <div className='flex justify-between bg-white/50 border-white border-b-2 py-3 md:py-5 px-4 items-center'>
        <div className='flex gap-x-2 items-center pl-2 pr-20'>
-        <Link to='/' className="flex gap-x-2 items-center pl-2"><img src={logo} width={25}/>
+        <Link to='/' className="flex gap-x-2 items-center pl-2"><img src={logo} width={35}/>
          <p className='font-bold text-lg lg:text-xl' style={{fontFamily: 'sans-serif'}}>SARCASM AI</p>
          </Link>
 
