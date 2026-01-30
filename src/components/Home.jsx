@@ -17,6 +17,7 @@ let handleFileUpload = (e) => {
     setImage(file)
     setPreview(URL.createObjectURL(file))
     setUrl("")
+    setResult(null)
 }
 
 let handleUrlUpload = async () => {
@@ -25,6 +26,7 @@ let handleUrlUpload = async () => {
   try {
  setImage(null)
  setPreview(url)
+ setResult(null)
 
   } catch (err) {
     alert("Invalid image URL")
@@ -39,11 +41,9 @@ let detectSarcasm = async () => {
 
   try {
     let formData = new FormData()
-    if (image) {
+if (image) {
   formData.append("image", image)
-}
-
-if (url) {
+} else if (url) {
   formData.append("image_url", url)
 }
 
